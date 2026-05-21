@@ -18,16 +18,17 @@ Repository ini berisi rancangan dan dokumentasi lengkap infrastruktur jaringan b
 ## Struktur Folder & Repositori
 
 ```text
-mamak-punya-liga
-├── docs
-│   └── ProyekAkhir_SH_30.pdf         # Laporan Resmi Praktikum (PDF)
-├── packet-tracer
-│   └── ProyekAkhir_SH_30.pkt         # File Simulasi Cisco Packet Tracer (.pkt)
-├── topology
-│   ├── logical_topology.png          # Topologi Logical Jaringan
-│   ├── physical_topology_city.png     # Topologi Physical (Tampilan Kota & Gedung)
-│   └── physical_topology_rack.png     # Topologi Physical (Tampilan Rak Server)
-└── README.md                          # Dokumentasi Utama Repository (Halaman Ini)
+mamak-punya-liga/
+├── assets/
+│   └── images/
+│       ├── Logical_Topology.png
+│       ├── Physical_Topology_City.png
+│       └── Physical_Topology_Rack.png
+├── docs/
+│   └── Laporan_Proyek_Kelompok_30.pdf
+├── topology/
+│   └── Topologi_Jaringan_Kelompok_30.pkt
+└── README.md (Root - Berkas Dokumentasi Utama Premium)
 ```
 
 ---
@@ -104,7 +105,7 @@ Perancangan jaringan menggunakan pendekatan Hierarchical Network Design sederhan
 * **Access Layer:** Menggunakan Switch Cisco 2960 yang terhubung langsung ke perangkat pengguna (End Devices) seperti PC, Laptop, dan Access Point. Pemisahan switch ini bertujuan untuk membagi beban trafik.
 * **Fitur Redundansi & Bandwidth:** Antara Switch Distribution dan Switch Access dihubungkan menggunakan teknologi EtherChannel (LACP). Konfigurasi ini menggabungkan 2 kabel fisik menjadi 1 link logis, yang berfungsi untuk meningkatkan kapasitas bandwidth antar-switch dan mencegah bottleneck trafik dari ratusan host.
 
-![Logical Topology](topology/logical_topology.png)
+![Logical Topology](assets/images/Logical_Topology.png)
 
 ### 2.2 Topologi Physical
 Sesuai ketentuan untuk visualisasi keadaan sebenarnya, implementasi fisik dibagi menjadi 3 Kota (Cities) dan 4 Gedung (Buildings). Ini merepresentasikan bahwa ketiga zona tersebut berada di lokasi geografis yang terpisah namun tetap terhubung dalam satu jaringan WAN.
@@ -120,10 +121,10 @@ Sesuai ketentuan untuk visualisasi keadaan sebenarnya, implementasi fisik dibagi
    * Berisi Server Pusat (DHCP/DNS/Email) yang diletakkan di Rack Server khusus.
 
 #### Tampilan Geografis (Physical Cities & Buildings)
-![Physical Topology City](topology/physical_topology_city.png)
+![Physical Topology City](assets/images/Physical_Topology_City.png)
 
 #### Tampilan Rak Perangkat (Rack Layout)
-![Physical Topology Rack](topology/physical_topology_rack.png)
+![Physical Topology Rack](assets/images/Physical_Topology_Rack.png)
 
 ---
 
